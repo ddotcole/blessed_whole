@@ -103,7 +103,8 @@ function insertNode(container, item, control){
     let link = document.createElement('a')
     link.href = "#"
     link.onclick = (what) => {
-        let string = what.path[0].innerHTML
+        console.log(what)
+        let string = what.target.innerHTML
         showInfo(string);
     }
     link.append(item)

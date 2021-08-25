@@ -6,6 +6,7 @@ body {
 
 #menu {
     background-color: grey;
+    color: white;
     position: absolute;
     box-sizing: border-box;
     height: 100%;
@@ -22,6 +23,7 @@ body {
     padding: 10px;
 }
 
+
 ul.tree li {
     list-style-type: none;
     position: relative;
@@ -37,8 +39,9 @@ ul.tree li.open > ul {
 }
 
 ul.tree li a {
-    color: black;
+    color: white;
     text-decoration: none;
+
 }
 
 ul.tree li a:before {
@@ -49,4 +52,8 @@ ul.tree li a:before {
     position: absolute;
     left: -1.3em;
     top: .2em;
+}
+
+a {
+    color: white;
 }

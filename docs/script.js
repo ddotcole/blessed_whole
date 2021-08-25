@@ -128,15 +128,28 @@ function sign(what){
 function showInfo(what){    
     let content = document.getElementById('content')
     content.innerHTML = ''
+    let title = document.createElement('h1')
+    title.append(`${what}`)
+    content.append(title)
+
     let headings = Object.keys(doc[what].Info)
     for(i in headings){
+        /*Create header*/
         let element = document.createElement('h3')
         element.innerHTML = headings[i]
         content.append(element)
+
+        /*Create listing*/
         let heading = doc[what].Info[headings[i]]
+        let list = document.createElement('ul')
         for (const [key, value] of Object.entries(heading)) {
-            content.append(`${key} : ${value}`)
-            content.append(document.createElement('br'))
+            let line = document.createElement('li')
+            let bold = document.createElement('b')
+            bold.append(`${key}: `)
+            line.append(bold)
+            line.append(`${value}`)
+            list.append(line)
         }
+        content.append(list)
     }
 }
